@@ -16,7 +16,7 @@ const CustomerTransaction = ({ onClose }) => {
 
     try {
       const res = await axios.get(
-        "http://localhost:8081/api/banker/customers",
+        "https://bank-backend-production-af9c.up.railway.app/api/banker/customers",
         {
           withCredentials: true,
         }
@@ -34,7 +34,7 @@ const CustomerTransaction = ({ onClose }) => {
       }
 
       const transactionRes = await axios.get(
-        `http://localhost:8081/api/banker/customers/${matchedCustomer.id}/transactions`,
+        `https://bank-backend-production-af9c.up.railway.app/api/banker/customers/${matchedCustomer.id}/transactions`,
         {
           withCredentials: true,
         }
