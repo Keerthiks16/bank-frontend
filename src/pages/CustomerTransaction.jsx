@@ -94,7 +94,7 @@ const CustomerTransaction = ({ onClose }) => {
         )}
 
         {transactions.length > 0 && (
-          <div className="overflow-auto border rounded p-2 mt-2">
+          <div className="overflow-x-auto border rounded p-2 mt-2">
             <table className="w-full text-left border-collapse min-w-[1000px]">
               <thead>
                 <tr>
