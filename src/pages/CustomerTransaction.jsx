@@ -88,7 +88,10 @@ const CustomerTransaction = ({ onClose }) => {
               <strong>Email:</strong> {customer.email}
             </p>
             <p>
-              <strong>Balance:</strong> ${customer.balance.toFixed(2)}
+              <strong>Balance:</strong> $
+              {typeof customer.balance === "number"
+                ? customer.balance.toFixed(2)
+                : parseFloat(customer.balance || 0).toFixed(2)}
             </p>
           </div>
         )}
